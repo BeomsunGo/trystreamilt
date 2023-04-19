@@ -8,7 +8,7 @@ df = pd.DataFrame(
        {"command": "st.time_input", "rating": 3, "is_widget": True},
    ]
 )
-edited_df = st.experimental_data_editor(df,witdh = 10, num_rows="dynamic")
+edited_df = st.experimental_data_editor(df,width = 10, num_rows="dynamic")
 
 favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
 st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
